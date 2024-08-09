@@ -528,6 +528,29 @@
       }
     ]
   },
+  "51read.org": {
+    "_name": "51Read",
+    "m": [
+      {
+        "title": "章节",
+        "docs": "https://docs.rsshub.app/routes/reading",
+        "source": [
+          "/xiaoshuo/:id"
+        ],
+        "target": "/51read/article/:id"
+      }
+    ],
+    ".": [
+      {
+        "title": "章节",
+        "docs": "https://docs.rsshub.app/routes/reading",
+        "source": [
+          "/xiaoshuo/:id"
+        ],
+        "target": "/51read/article/:id"
+      }
+    ]
+  },
   "52hrtt.com": {
     "_name": "52hrtt 华人头条",
     ".": [
@@ -2162,6 +2185,29 @@
       }
     ]
   },
+  "bjnews.com.cn": {
+    "_name": "新京报",
+    "www": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/:cat"
+        ],
+        "target": "/bjnews/cat/:cat"
+      }
+    ],
+    "m": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/column/:column.htm"
+        ],
+        "target": "/bjnews/column/:column"
+      }
+    ]
+  },
   "bjp.org.cn": {
     "_name": "北京天文馆",
     ".": [
@@ -3147,6 +3193,19 @@
       }
     ]
   },
+  "cffex.com.cn": {
+    "_name": "中国金融期货交易所",
+    ".": [
+      {
+        "title": "交易所公告",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/"
+        ],
+        "target": "/cffex/announcement"
+      }
+    ]
+  },
   "cfr.org": {
     "_name": "Council on Foreign Relations",
     "www": [
@@ -3299,6 +3358,19 @@
           "/"
         ],
         "target": "/chinaventure/news/:id?"
+      }
+    ]
+  },
+  "chlinlearn.top": {
+    "_name": "chlinlearn的技术博客",
+    "daily-blog": [
+      {
+        "title": "值得一读技术博客",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/blogs/*"
+        ],
+        "target": "/chlinlearn/chlinlearn/daily-blog"
       }
     ]
   },
@@ -6477,6 +6549,19 @@
       }
     ]
   },
+  "research.google": {
+    "_name": "Google",
+    ".": [
+      {
+        "title": "Research Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/google/research"
+      }
+    ]
+  },
   "ah.gov.cn": {
     "_name": "上海市人民政府",
     "kjt": [
@@ -8805,6 +8890,27 @@
       }
     ]
   },
+  "inspirehep.net": {
+    "_name": "INSPIRE",
+    ".": [
+      {
+        "title": "Author Search",
+        "docs": "https://docs.rsshub.app/routes/journal",
+        "source": [
+          "/authors/:id"
+        ],
+        "target": "/inspirehep/authors/:id"
+      },
+      {
+        "title": "Literature Search",
+        "docs": "https://docs.rsshub.app/routes/journal",
+        "source": [
+          "/literature"
+        ],
+        "target": "/inspirehep(_params,url)=>`/inspirehep/literature/${new URL(url).searchParams.get(\"q\")}`"
+      }
+    ]
+  },
   "instructables.com": {
     "_name": "Instructables",
     ".": [
@@ -9403,6 +9509,14 @@
         "target": "/juejin/column/:id"
       },
       {
+        "title": "用户动态",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/user/:id"
+        ],
+        "target": "/juejin/dynamic/:id"
+      },
+      {
         "title": "收藏集",
         "docs": "https://docs.rsshub.app/routes/programming",
         "source": [
@@ -9642,6 +9756,20 @@
           "/essay"
         ],
         "target": "/kunchengblog/essay"
+      }
+    ]
+  },
+  "kurogames.com": {
+    "_name": "库洛游戏",
+    "mc": [
+      {
+        "title": "鸣潮 — 游戏公告、新闻与活动",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/m/main/news",
+          "/main"
+        ],
+        "target": "/kurogames/wutheringwaves/news"
       }
     ]
   },
@@ -10557,6 +10685,24 @@
     "_name": "鏡週刊 Mirror Media",
     ".": [
       {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/category/:category",
+          "/section/:section"
+        ],
+        "target": "/mirrormedia/category/:category"
+      },
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/category/:category",
+          "/section/:section"
+        ],
+        "target": "/mirrormedia/section/:section"
+      },
+      {
         "title": "首页",
         "docs": "https://docs.rsshub.app/routes/traditional-media",
         "source": [
@@ -10839,7 +10985,7 @@
     ]
   },
   "nasa.govundefined": {
-    "_name": "NASA Astronomy Picture of the Day",
+    "_name": "NASA",
     "apod": [
       {
         "title": "NASA 中文",
@@ -10858,7 +11004,7 @@
         "target": "/nasa/apod-ncku"
       },
       {
-        "title": "NASA",
+        "title": "Astronomy Picture of the Day",
         "docs": "https://docs.rsshub.app/routes/picture",
         "source": [
           "/"
@@ -13563,7 +13709,7 @@
     ],
     "book": [
       {
-        "title": "章节",
+        "title": "作品章节",
         "docs": "https://docs.rsshub.app/routes/reading",
         "source": [
           "/info/:id"
@@ -15254,7 +15400,7 @@
     "_name": "秀动网",
     "www": [
       {
-        "title": "音乐人 - 演出更新",
+        "title": "按音乐人 - 演出更新",
         "docs": "https://docs.rsshub.app/routes/shopping",
         "source": [
           "/artist/:id"
@@ -15262,12 +15408,20 @@
         "target": "/showstart/artist/:id"
       },
       {
-        "title": "厂牌 - 演出更新",
+        "title": "按厂牌 - 演出更新",
         "docs": "https://docs.rsshub.app/routes/shopping",
         "source": [
           "/host/:id"
         ],
         "target": "/showstart/brand/:id"
+      },
+      {
+        "title": "按场地 - 演出更新",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/venue/:id"
+        ],
+        "target": "/showstart/site/:siteId"
       }
     ]
   },
@@ -16511,6 +16665,107 @@
           "/list/:category/"
         ],
         "target": "/tgbus/list/:category"
+      }
+    ]
+  },
+  "the.bi": {
+    "_name": "The.bi",
+    ".": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/:category"
+        ],
+        "target": "/theparams=>{const category=params.category;return`/the${category?`/category/${category}`:\"\"}`}"
+      },
+      {
+        "title": "时局图",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawj7o4ypewv94"
+        ],
+        "target": "/the/category/rawj7o4ypewv94"
+      },
+      {
+        "title": "剩余价值",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawmw7dsta2jew"
+        ],
+        "target": "/the/category/rawmw7dsta2jew"
+      },
+      {
+        "title": "打江山",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawbcvxkktdkq8"
+        ],
+        "target": "/the/category/rawbcvxkktdkq8"
+      },
+      {
+        "title": "中国经济",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/raw4krvx85dh27"
+        ],
+        "target": "/the/category/raw4krvx85dh27"
+      },
+      {
+        "title": "水深火热",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawtn8jpsc6uvv"
+        ],
+        "target": "/the/category/rawtn8jpsc6uvv"
+      },
+      {
+        "title": "东升西降",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawai5kd4z15il"
+        ],
+        "target": "/the/category/rawai5kd4z15il"
+      },
+      {
+        "title": "大局 & 大棋",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/raw2efkzejrsx8"
+        ],
+        "target": "/the/category/raw2efkzejrsx8"
+      },
+      {
+        "title": "境外势力",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawmpalhnlphuc"
+        ],
+        "target": "/the/category/rawmpalhnlphuc"
+      },
+      {
+        "title": "副刊",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawxght2jr2u5z"
+        ],
+        "target": "/the/category/rawxght2jr2u5z"
+      },
+      {
+        "title": "天高地厚",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawrsnh9zakqdx"
+        ],
+        "target": "/the/category/rawrsnh9zakqdx"
+      },
+      {
+        "title": "Oyster",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/s/rawdhl9hugdfn9"
+        ],
+        "target": "/the/category/rawdhl9hugdfn9"
       }
     ]
   },
@@ -17997,7 +18252,7 @@
     ]
   },
   "weibo.com": {
-    "_name": "微博绿洲",
+    "_name": "微博",
     ".": [
       {
         "title": "最新关注时间线",
@@ -18036,7 +18291,7 @@
     ]
   },
   "weibo.cn": {
-    "_name": "微博绿洲",
+    "_name": "微博",
     "m": [
       {
         "title": "博主",
@@ -18661,6 +18916,15 @@
     ],
     "hk.news": [
       {
+        "title": "合作媒體",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/",
+          "/"
+        ],
+        "target": "/yahoo/news/list/:region/:listId"
+      },
+      {
         "title": "新聞來源列表",
         "docs": "https://docs.rsshub.app/routes/new-media",
         "source": [
@@ -19084,14 +19348,6 @@
           "/collection/:id"
         ],
         "target": "/zhihu/collection/:id"
-      },
-      {
-        "title": "知乎热榜",
-        "docs": "https://docs.rsshub.app/routes/social-media",
-        "source": [
-          "/hot"
-        ],
-        "target": "/zhihu/hotlist"
       },
       {
         "title": "用户文章",
